@@ -1,12 +1,17 @@
 import Foundation
 
 class Predators {
+    // MARK: - Properties
     var apexPredators: [ApexPredator] = []
     
+    // MARK: - Initializers
     init() {
         decodeApexPredators()
     }
     
+    // MARK: - Methods
+    
+    // Decode function for JSON
     func decodeApexPredators() {
         if let url = Bundle.main.url(forResource: "jpapexpredators", withExtension: "json") {
             do {
