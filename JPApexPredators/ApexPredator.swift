@@ -17,7 +17,7 @@ struct ApexPredator: Decodable, Identifiable {
     }
     
     // MARK: - Movie Scene Description
-    struct MovieScene: Decodable {
+    struct MovieScene: Decodable, Identifiable {
         let id: Int
         let movie: String
         let sceneDescription: String
