@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import MapKit
 
 // MARK: - Predator Struct
 struct ApexPredator: Decodable, Identifiable {
@@ -14,6 +15,10 @@ struct ApexPredator: Decodable, Identifiable {
     
     var image: String {
         name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+    
+    var location: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
     // MARK: - Movie Scene Description
